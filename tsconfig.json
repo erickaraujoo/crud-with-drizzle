@@ -21,16 +21,16 @@
     "moduleDetection": "auto",
 
     /* Modules */
-    // "module": "CommonJS",
+    "module": "CommonJS",
     "rootDir": "./src",
-    "moduleResolution": "node",
+    "moduleResolution": "Node10",
     "baseUrl": "./src",
     "paths": {
       "@application/*": ["application/*"],
       "@domain/*": ["domain/*"],
       "@infra/*": ["infra/*"],
-      "@interface/*": ["interface/*"],
-      "@config/*": ["config/*"]
+      "@presentation/*": ["presentation/*"],
+      "@main/*": ["main/*"]
     },
     "rootDirs": [],
     "typeRoots": [],
@@ -72,7 +72,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "preserveSymlinks": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
 
     /* Type Checking */
     "strict": true,
@@ -85,7 +85,7 @@
     "useUnknownInCatchVariables": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "exactOptionalPropertyTypes": false, // Study rule
     "noImplicitReturns": false, // Study rule
     "noFallthroughCasesInSwitch": true,
@@ -113,6 +113,6 @@
     /* Output Formatting */
     "noErrorTruncation": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules"]
 }

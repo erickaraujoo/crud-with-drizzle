@@ -55,10 +55,7 @@
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
     "@typescript-eslint/consistent-type-exports": "error",
-    "@typescript-eslint/consistent-type-imports": [
-      "error",
-      { "prefer": "type-imports" }
-    ],
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
     "@typescript-eslint/default-param-last": "error" /* Enforce default parameters to be last */,
     "@typescript-eslint/dot-notation": ["error", { "allowKeywords": true }],
     "@typescript-eslint/explicit-function-return-type": "error",
@@ -67,10 +64,7 @@
     "@typescript-eslint/func-call-spacing": "error",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/init-declarations": "error",
-    "@typescript-eslint/key-spacing": [
-      "error",
-      { "afterColon": true, "beforeColon": false }
-    ],
+    "@typescript-eslint/key-spacing": ["error", { "afterColon": true, "beforeColon": false }],
     "@typescript-eslint/keyword-spacing": "error",
     "@typescript-eslint/lines-around-comment": "off",
     "@typescript-eslint/lines-between-class-members": "error",
@@ -140,10 +134,7 @@
     "@typescript-eslint/no-redeclare": "error",
     "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-require-imports": "error",
-    "@typescript-eslint/no-restricted-imports": [
-      "error",
-      { "patterns": ["../.*", "./.*"] }
-    ],
+    "@typescript-eslint/no-restricted-imports": ["error", { "patterns": ["../.*", "./.*"] }],
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-this-alias": "error",
     "@typescript-eslint/no-throw-literal": "error",
@@ -233,10 +224,7 @@
     "@typescript-eslint/unified-signatures": "error",
 
     /* Comments - Default */
-    "eslint-comments/disable-enable-pair": [
-      "error",
-      { "allowWholeFile": true }
-    ],
+    "eslint-comments/disable-enable-pair": ["error", { "allowWholeFile": true }],
     "eslint-comments/no-aggregating-enable": "error",
     "eslint-comments/no-duplicate-disable": "error",
     "eslint-comments/no-unlimited-disable": "error",
@@ -313,11 +301,7 @@
     "flowtype/valid-syntax": "error",
 
     /* Import Plugin - Default */
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      { "ts": "never", "tsx": "never" }
-    ],
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
@@ -517,10 +501,7 @@
     "no-multi-assign": "error",
     "no-multi-spaces": "error",
     "no-multi-str": "error",
-    "no-multiple-empty-lines": [
-      "error",
-      { "max": 2, "maxBOF": 0, "maxEOF": 0 }
-    ],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 0, "maxEOF": 0 }],
     "no-negated-condition": "error",
     "no-nested-ternary": "error",
     "no-new": "error",
@@ -582,11 +563,7 @@
         "property": "notDeepEqual"
       }
     ],
-    "no-restricted-syntax": [
-      "error",
-      "WithStatement",
-      "BinaryExpression[operator='in']"
-    ],
+    "no-restricted-syntax": ["error", "WithStatement", "BinaryExpression[operator='in']"],
     "no-return-assign": "error",
     "no-return-await": "off",
     "no-script-url": "error",
@@ -635,20 +612,10 @@
     "no-whitespace-before-property": "error",
     "no-with": "error",
     "nonblock-statement-body-position": "off",
-    "object-curly-newline": [
-      "error",
-      { "consistent": true, "multiline": true }
-    ],
+    "object-curly-newline": ["error", { "consistent": true, "multiline": true }],
     "object-curly-spacing": "off",
-    "object-property-newline": [
-      "error",
-      { "allowAllPropertiesOnSameLine": true }
-    ],
-    "object-shorthand": [
-      "error",
-      "always",
-      { "avoidExplicitReturnArrows": true }
-    ],
+    "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }],
+    "object-shorthand": ["error", "always", { "avoidExplicitReturnArrows": true }],
     "one-var": "off",
     "one-var-declaration-per-line": "error",
     "operator-assignment": "error",
@@ -719,12 +686,6 @@
   },
   "overrides": [
     {
-      "files": ["**/*.d.ts"],
-      "rules": {
-        "spaced-comment": "off"
-      }
-    },
-    {
       "files": ["**/*.{spec,test}.ts", "test/**/*"],
       "rules": {
         "@typescript-eslint/init-declarations": "off",
@@ -737,73 +698,66 @@
       }
     },
     {
-      "files": ["**/prisma.service.ts"],
-      "rules": { "@typescript-eslint/no-misused-promises": "off" }
+      "files": ["**/moduleAlias.ts", "**/database.ts"],
+      "rules": { "no-ternary": "off", "@typescript-eslint/no-ternary": "off" }
     },
     {
-      "files": ["**/*.entity.ts"],
+      "files": ["**/errorHandlerMiddleware.ts"],
       "rules": {
-        "max-params": "off",
-        "import/no-cycle": "off",
-        "no-ternary": "off"
-      }
-    },
-    {
-      "files": ["**/*.repository.ts"],
-      "rules": { "no-ternary": "off", "no-undefined": "off" }
-    },
-    {
-      "files": ["**/module-alias.config.ts", "**/database.config.ts"],
-      "rules": { "no-ternary": "off" }
-    },
-    {
-      "files": ["**/*.controller.ts"],
-      "rules": { "@typescript-eslint/consistent-return": "off" }
-    },
-    {
-      "files": ["**/error-handler.middleware.ts"],
-      "rules": {
-        "@typescript-eslint/max-params": ["error", { "max": 4 }],
         "unused-imports/no-unused-vars": "off"
       }
     },
     {
-      "files": ["**/middleware/**/*.ts", "**/multer.utils.ts"],
+      "files": ["**/infra/repositories/**/*.ts", "**/errorHandlerMiddleware.ts"],
       "rules": {
-        "@typescript-eslint/naming-convention": "off"
+        "@typescript-eslint/class-methods-use-this": "off"
+      }
+    },
+    {
+      "files": ["**/domain/entity/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/parameter-properties": "off"
+      }
+    },
+    {
+      "files": ["**/loadRoutes.ts"],
+      "rules": {
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off"
+      }
+    },
+    {
+      "files": ["**/server.ts"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": "off"
+      }
+    },
+    {
+      "files": ["**/errorHandlerMiddleware.ts", "**/domain/entity/*.ts"],
+      "rules": {
+        "@typescript-eslint/max-params": "off"
+      }
+    },
+    {
+      "files": ["**/adaptRoute.ts"],
+      "rules": {
+        "@typescript-eslint/use-unknown-in-catch-callback-variable": "off"
+      }
+    },
+    {
+      "files": ["**/constants.ts"],
+      "rules": {
+        "@typescript-eslint/no-magic-numbers": "off"
       }
     }
   ],
   "settings": {
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": false
-    },
+    "flowtype": { "onlyFilesWithFlowAnnotation": false },
     "import/ignore": ["express"],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
-    },
-    "import/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
-        "project": "./tsconfig.json"
-      }
-    }
+    "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
+    "import/resolver": { "typescript": { "alwaysTryTypes": true, "project": "./tsconfig.json" } }
   },
-  "ignorePatterns": [
-    "*.log",
-    "*.local",
-    "*.config.js",
-    "*.json",
-    "*.prisma",
-    "**/migrations/*",
-    "/build/**",
-    "/coverage/**",
-    "/dist/**",
-    "/docs/**",
-    "/logs/**",
-    "/log/**",
-    "/templates/**",
-    "/tmp/**",
-    "/node_modules"
-  ]
+  "ignorePatterns": []
 }

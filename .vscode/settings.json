@@ -26,10 +26,6 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma-insider",
-    "editor.formatOnSave": true
-  },
   "css.lint.unknownAtRules": "ignore",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
