@@ -29,3 +29,25 @@ export const CustomErrorMessage: Omit<Record<CustomErrorType, string>, 'FieldNot
   [CustomErrorType.InternalServerError]: 'Erro interno no servidor',
   [CustomErrorType.UserEmailAlreadyExists]: 'Ja existe um usuário com este e-mail'
 };
+
+export const maxSerialRange = 2 ** 31 - 1;
+export const maxNumericRange = 99999999.99;
+export const emptyString = 0;
+export const emptyArray = 0;
+
+export const errorDateSchema = (value: string): string => `O campo ${value} deve ser uma data`;
+export const errorNumberSchema = (value: string): string => `O campo ${value} deve ser um número`;
+export const errorArraySchema = (value: string): string => `O campo ${value} deve ser um array`;
+export const errorObjectSchema = (value: string): string => `O campo ${value} deve ser um objeto`;
+export const errorRequiredSchema = (value: string): string => `O campo ${value} é obrigatório`;
+
+export const errorMoreThenZeroSchema = (value: string): string =>
+  `O campo ${value} deve ser maior que zero`;
+
+export const numberSizeLimitExcedded = (value: string, limit: number | string): string =>
+  `O campo ${value} deve ser um valor menor ou igual a ${limit}`;
+
+export const defaultErrorMessages = {
+  userWithoutPermission: 'Usuário não possui permissão para realizar esta ação',
+  yupError: 'Falha durante validação'
+};

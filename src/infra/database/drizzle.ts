@@ -1,12 +1,11 @@
-import { Pool } from 'pg';
 import { dbConfig } from '@main/config/constants';
-import { drizzle } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/mysql2';
+import mysql from 'mysql2/promise';
 
-const pool = new Pool({
+const pool = mysql.createPool({
   database: dbConfig.name,
   host: dbConfig.host,
   password: dbConfig.password,
-  ssl: true,
   user: dbConfig.userName
 });
 
